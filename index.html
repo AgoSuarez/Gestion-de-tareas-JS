@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <main>
+        <section class="top">
+            <h1>Gestion de tareas</h1>
+            <form action="" class="formulario">
+                <div class="inputs">
+                    <input type="hidden" name="index" id="index">
+                    <label for="tarea">Tarea</label>
+                    <input type="text" name="tarea" id="tarea">
+                    <label for="hecho">Terminada
+                        <input type="checkbox" name="hecho" id="hecho">
+                    </label>
+                </div>
+                <div class="botones">
+                    <input class="btn" type="button" id="btnGuardar" value="Guardar">
+                </div>
+            </form>
+        </section>
+        <section class="bottom">
+            <article>
+                <h2>Tareas Pendientes</h2>
+                <table class="todo">
+                    <thead>
+                        <th>#</th>
+                        <th>Tarea</th>
+                    </thead>
+                    <tbody id="todo-body">
+
+                    </tbody>
+                </table>
+            </article>
+            <article>
+                <h2>Tareas Terminadas</h2>
+                <table class="ok">
+                    <thead>
+                        <th>#</th>
+                        <th>Tarea</th>
+                    </thead>
+                    <tbody id="ok-body">
+
+                    </tbody>
+                </table>
+        </section>
+        </article>
+    </main>
+</body>
+
+</html>
