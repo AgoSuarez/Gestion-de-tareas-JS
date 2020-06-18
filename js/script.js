@@ -113,7 +113,7 @@ function guardarElemento() {
     LimpiarFormulario();
     RellenarTabla();
   } else {
-    alert("Debe introducir una tarea");
+    swal("Debe introducir una tarea");
   }
 }
 
