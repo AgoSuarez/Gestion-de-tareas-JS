@@ -73,12 +73,28 @@ function muestraTarea(id) {
 function guardarElemento() {
   let indice = document.getElementById("index").value;
   let tareaTxt = document.getElementById("tarea").value;
-
+  let checkedTxt = document.getElementById("hecho").checked;
   if (tareaTxt != "") {
     if (indice != "") {
-      indice = parseInt(indice - 1);
-      tareas[indice].tarea = document.getElementById("tarea").value;
-      tareas[indice].hecho = document.getElementById("hecho").checked;
+      swal({
+        title: "Actualizar la tarea",
+        text: "¿Desea guardar los datos modificados?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      }).then((willUpdate) => {
+        if (willUpdate) {
+          indice = parseInt(indice - 1);
+          tareas[indice].tarea = tareaTxt;
+          tareas[indice].hecho = checkedTxt;
+          localStorage.setItem("tareas", JSON.stringify(tareas));
+          RellenarTabla();
+          swal("La tarea ha sido actualizada", {
+            icon: "success",
+          });
+          LimpiarFormulario();
+        }
+      });
     } else {
       let tarea = {};
       indice = tareas.length + 1;
@@ -87,6 +103,11 @@ function guardarElemento() {
       tarea["hecho"] = document.getElementById("hecho").checked;
       // console.log(tarea);
       tareas.push(tarea);
+      swal({
+        title: "Tarea creada con exito",
+        text: tareaTxt + " fue creada correctamente",
+        icon: "success",
+      });
     }
     localStorage.setItem("tareas", JSON.stringify(tareas));
     LimpiarFormulario();
