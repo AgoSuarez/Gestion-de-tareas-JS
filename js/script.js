@@ -119,7 +119,7 @@ function guardarElemento() {
 
 function LimpiarFormulario() {
   document.getElementById("tarea").value = "";
-  tareaInput.removeAttribute("disabled");
+  document.getElementById("tarea").removeAttribute("disabled");
   document.getElementById("index").value = "";
   document.getElementById("hecho").checked = false;
 }
