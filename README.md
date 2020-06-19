@@ -67,5 +67,3 @@ Siempre en busca de **nuevos retos**.<br />
 Copyright © 2020 [AgoSuarez](https://www.linkedin.com/in/agoney-v%C3%ADctor-su%C3%A1rez-ortega-052689187/). <br />
 Este proyecto tiene licencia MIT [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-
-<!-- AUTO-GENERATED-CONTENT:END -->
