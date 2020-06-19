@@ -35,6 +35,10 @@ function iniciar() {
 
   const btn = document.getElementById("btnGuardar");
   btn.addEventListener("click", guardarElemento);
+
+  document.getElementById("btnCancelar").addEventListener("click", () => {
+    LimpiarFormulario();
+  });
 }
 
 function RellenarTabla() {
